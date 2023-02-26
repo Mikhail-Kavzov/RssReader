@@ -30,7 +30,7 @@ namespace RssReader
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = MainViewModel;
+            this.BindingContext = MainViewModel;
             _reader = new UrlNewsReader(URL);
             _timer = new Timer(ReadRss, null, 0, TIMER_INTERVAL);
         }
@@ -55,9 +55,9 @@ namespace RssReader
             }
         }
 
-        private async void News_Selected(object sender, SelectedItemChangedEventArgs e)
+        private async void newsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new WebPage(MainViewModel.SelectedItem.BaseUri.ToString()));
+            await Navigation.PushAsync(new WebPage(MainViewModel.SelectedItem.Links[0].Uri.AbsoluteUri));
         }
     }
 }

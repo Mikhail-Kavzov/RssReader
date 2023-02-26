@@ -1,4 +1,5 @@
 ﻿
+using Android.Content.Res;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.ServiceModel.Syndication;
 using System.Text;
+using Xamarin.Forms;
 
 namespace RssReader
 {
@@ -31,7 +33,7 @@ namespace RssReader
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
-            if (PropertyChanged!= null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }

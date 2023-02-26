@@ -12,7 +12,7 @@
     <StackLayout>
         <ListView x:Name="newsList" Margin="5,0" SeparatorColor="White"
                       ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HasUnevenRows="True"
-                 ItemSelected="News_Selected">
+                  ItemSelected="newsList_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
