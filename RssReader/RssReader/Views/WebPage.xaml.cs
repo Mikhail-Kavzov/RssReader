@@ -18,5 +18,10 @@ namespace RssReader
             InitializeComponent();
             webView.Source= new Uri(url);
         }
+
+        private void backBtn_Clicked()
+        {
+
+        }
     }
 }

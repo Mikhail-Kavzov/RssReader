@@ -4,6 +4,7 @@
              x:Class="RssReader.WebPage">
     <ContentPage.Content>
         <StackLayout>
+            <Button x:Name="backBtn" Text="<-" Clicked="backBtn_Clicked"/>
             <WebView x:Name="webView" VerticalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>

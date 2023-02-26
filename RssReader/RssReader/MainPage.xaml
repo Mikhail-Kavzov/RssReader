@@ -20,7 +20,7 @@
                             <StackLayout Padding="10,5,20,10">
                                 <Label x:Name="header" Text="{Binding Path=Title.Text}"/>
                                 <Label x:Name="date" Text="{Binding Path=PublishDate,
-                                    Converter={StaticResource dateTimeConverter}}}"
+                                    Converter={StaticResource dateTimeConverter}}"
                                        />
                             </StackLayout>
                         </ViewCell.View>
