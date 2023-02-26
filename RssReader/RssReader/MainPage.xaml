@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:RssReader.Converter"
+             x:Class="RssReader.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:DateTimeConverter x:Key="dateTimeConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView x:Name="newsList" Margin="5,0" SeparatorColor="White"
+                      ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="10,5,20,10">
+                                <Label x:Name="header" Text="{Binding Path=Title.Text}"/>
+                                <Label x:Name="date" Text="{Binding Path=PublishDate,
+                                    Converter={StaticResource dateTimeConverter}}}"
+                                       />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
