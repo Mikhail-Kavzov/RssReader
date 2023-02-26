@@ -19,9 +19,9 @@ namespace RssReader
             webView.Source= new Uri(url);
         }
 
-        private void backBtn_Clicked()
+        private async void BackBtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PopAsync();
         }
     }
 }
