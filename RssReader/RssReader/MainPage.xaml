@@ -11,7 +11,8 @@
     </ContentPage.Resources>
     <StackLayout>
         <ListView x:Name="newsList" Margin="5,0" SeparatorColor="White"
-                      ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HasUnevenRows="True">
+                      ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" HasUnevenRows="True"
+                 ItemSelected="News_Selected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

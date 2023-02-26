@@ -54,5 +54,10 @@ namespace RssReader
                 }
             }
         }
+
+        private async void News_Selected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new WebPage(MainViewModel.SelectedItem.BaseUri.ToString()));
+        }
     }
 }
